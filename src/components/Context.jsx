@@ -1,20 +1,22 @@
-import {createContext, useContext, useState} from "react";
+import { createContext, useContext, useState } from "react";
 
-const UserContext = createContext([{
+const userContext = createContext( [{
     firstName: 'Lech',
     lastName: 'K.',
     suffix: 1,
-    email: 'lech.k@smolensk.edu.pl'
-}, () => {}])
+    email: 'lech.k@smolensk.ru'
+}, ()=>{} ]);
 
-function LevelFive(){
-    const [user, setUser] = useContext(UserContext);
-
-
+function LevelFive() {
+    const [user, setUser] = useContext(userContext);
     return (
         <div>
-            <h5>{user.firstName}, {user.lastName}. {user.suffix}</h5>
-            <button onClick={() =>{
+            <h5>
+                {user.firstName}
+                {user.lastName}
+                {user.suffix}
+            </h5>
+            <button onClick={()=> {
                 // setUser({...user, suffix: user.suffix + 1})
                 setUser(Object.assign({}, user, {suffix: user.suffix + 1}))
             }}>Increment</button>
@@ -22,46 +24,52 @@ function LevelFive(){
     )
 }
 
-function LevelFour(){
-    return (
+function LevelFour() {
+
+    return(
         <div>
-            <h1>fourth level</h1>
-            <levelFive/>
+            <h4>Level four</h4>
+            <LevelFive/>
         </div>
     )
 }
 
-function levelThree(){
-    return (
+
+function LevelThree() {
+
+    return(
         <div>
-            <h2>fourth level</h2>
-            <levelFour/>
+            <h3>Level three</h3>
+            <LevelFour/>
         </div>
     )
 }
 
-function levelTwo(){
-    return (
+
+function LevelTwo() {
+
+    return(
         <div>
-            <h3>fourth level</h3>
-            <levelThree/>
+            <h2>Level two</h2>
+            <LevelThree/>
         </div>
     )
 }
 
-function ContextComponent(){
+function ContextComponent() {
+
     const userState = useState({
         firstName: 'Lech',
         lastName: 'K.',
         suffix: 1,
-        email: 'lech.k@smolensk.edu.pl'
+        email: 'lech.k@smolensk.ru'
     });
 
     return (
-        <UserContext.Provider vaue={userState}>
-            <levelTwo/>
-        </UserContext.Provider>
+        <userContext.Provider value={userState}>
+            <LevelTwo/>
+        </userContext.Provider>
     )
-}
+};
 
-export default ContextComponent();
+export default ContextComponent;
