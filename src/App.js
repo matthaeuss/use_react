@@ -1,5 +1,6 @@
 import EffectComponent from './components/Effect.jsx';
 import StateComponent from './components/State.jsx'
+import ContextComponent from './components/Context.jsx'
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
 
         <StateComponent />
         <EffectComponent />
+        <ContextComponent />
 
       </div>
   );
