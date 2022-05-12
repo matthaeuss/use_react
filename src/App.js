@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import ContextComponent from './components/Context.jsx';
+import EffectComponent from './components/Effect.jsx';
+import RefComponent from './components/Ref';
+import StateComponent from './components/State.jsx'
+import ReducerComponent from './components/Reducer.jsx'
+import MemoComponent from './components/Memo.jsx'
+import CallbackComponent from "./components/Callback";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <StateComponent />
+            <hr/>
+            <EffectComponent />
+            <hr/>
+            <ContextComponent />
+            <hr/>
+            <RefComponent/>
+            <hr/>
+            <ReducerComponent/>
+            <hr/>
+            <MemoComponent />
+            <hr/>
+            <CallbackComponent/>
+        </div>
+    );
 }
 
 export default App;
