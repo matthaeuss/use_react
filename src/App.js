@@ -5,6 +5,7 @@ import RefComponent from './components/Ref';
 import StateComponent from './components/State.jsx'
 import ReducerComponent from './components/Reducer.jsx'
 import MemoComponent from './components/Memo.jsx'
+import CallbackComponent from "./components/Callback";
 
 function App() {
     return (
@@ -20,6 +21,8 @@ function App() {
             <ReducerComponent/>
             <hr/>
             <MemoComponent />
+            <hr/>
+            <CallbackComponent/>
         </div>
     );
 }
