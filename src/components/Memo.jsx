@@ -10,7 +10,6 @@ function MemoComponent(){
 
     const [num, setNum] = useState(0);
     const [isGreen, setIsGreen] = useState(true);
-
     const fib = useMemo(() => fibonacci(num), [num])
 
     return (
