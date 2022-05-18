@@ -7,7 +7,8 @@ import ReducerComponent from './components/Reducer.jsx'
 import MemoComponent from './components/Memo.jsx'
 import CallbackComponent from "./components/Callback";
 import LayoutEffect from './components/LayoutEffect';
-import ImperativeHandle from './components/ImperativeHandle'
+import ImperativeHandle from './components/ImperativeHandle';
+import DebugValue from './components/DebugValue'
 
 function App() {
     return (
@@ -29,6 +30,8 @@ function App() {
             <LayoutEffect />
             <hr/>
             <ImperativeHandle />
+            <hr/>
+            <DebugValue />
         </div>
     );
 }
